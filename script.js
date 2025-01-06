@@ -49,6 +49,8 @@ window.speechSynthesis.onvoiceschanged = () => {
     voices = window.speechSynthesis.getVoices();
     speech.voice = voices[0]; // Set default voice
 
+  
+    
     // Clear existing options
     voiceSelect.innerHTML = "";
 
@@ -74,3 +76,4 @@ document.querySelector("button").addEventListener("click", () => {
     speech.text = textArea.value;
     window.speechSynthesis.speak(speech);
 });
+console.log("Current voice:", speech.voice.name);
